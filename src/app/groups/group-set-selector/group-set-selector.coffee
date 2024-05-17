@@ -14,5 +14,6 @@ angular.module('doubtfire.groups.group-set-selector', [])
     unless $scope.unit?
       throw Error "Unit not supplied to group set selector"
     $scope.selectGroupSet = ->
+      console.log("selectGroupSet from group-set-selector fired: #{$scope.selectedGroupSet.name}")
       $scope.onSelectGroupSet?($scope.selectedGroupSet)
 )

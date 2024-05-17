@@ -101,7 +101,7 @@ import 'build/src/app/groups/group-set-manager/group-set-manager.js';
 import 'build/src/app/groups/groups.js';
 import 'build/src/app/groups/group-member-contribution-assigner/group-member-contribution-assigner.js';
 import 'build/src/app/groups/group-member-list/group-member-list.js';
-import 'build/src/app/groups/group-set-selector/group-set-selector.js';
+// import 'build/src/app/groups/group-set-selector/group-set-selector.js';
 import 'build/src/app/groups/tutor-group-manager/tutor-group-manager.js';
 import 'build/src/app/units/modals/unit-student-enrolment-modal/unit-student-enrolment-modal.js';
 import 'build/src/app/units/modals/unit-ilo-edit-modal/unit-ilo-edit-modal.js';
@@ -241,6 +241,7 @@ import { FTaskSheetViewComponent } from './units/states/tasks/viewer/directives/
 import { TasksViewerComponent } from './units/states/tasks/tasks-viewer/tasks-viewer.component';
 
 import { FUnitsComponent } from './admin/states/f-units/f-units.component';
+import { GroupSetSelectorComponent } from './groups/group-set-selector/group-set-selector.component';
 export const DoubtfireAngularJSModule = angular.module('doubtfire', [
   'doubtfire.config',
   'doubtfire.sessions',
@@ -385,6 +386,8 @@ DoubtfireAngularJSModule.directive('fPdfViewer', downgradeComponent({ component:
 DoubtfireAngularJSModule.directive('pdfViewerPanel', downgradeComponent({ component: PdfViewerPanelComponent }));
 DoubtfireAngularJSModule.directive('staffTaskList', downgradeComponent({ component: StaffTaskListComponent }));
 DoubtfireAngularJSModule.directive('statusIcon', downgradeComponent({ component: StatusIconComponent }));
+
+DoubtfireAngularJSModule.directive('groupSetSelector', downgradeComponent({ component: GroupSetSelectorComponent }));
 
 // Global configuration
 

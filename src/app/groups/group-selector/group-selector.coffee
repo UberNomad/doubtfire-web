@@ -86,6 +86,7 @@ angular.module('doubtfire.groups.group-selector', [])
     $scope.selectedGroupSet ?= _.first($scope.unit.groupSets)
     $scope.showGroupSetSelector ?= $scope.unit.groupSets.length > 1
     $scope.selectGroupSet = (groupSet) ->
+      console.log "selectGroupSet fired for: #{groupSet?.name}"
       return unless groupSet?
       startLoading()
       $scope.selectGroup(null)
@@ -103,6 +104,8 @@ angular.module('doubtfire.groups.group-selector', [])
       })
 
     $scope.selectGroupSet($scope.selectedGroupSet)
+
+    console.log "selectedGroupSet is #{$scope.selectedGroupSet.name}"
 
     # Load groups if not loaded
     # $scope.unit.getGroups($scope.selectedGroupSet.id) if $scope.selectedGroupSet?.groups?

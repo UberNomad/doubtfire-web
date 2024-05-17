@@ -2,11 +2,18 @@
   <h4 class="panel-title">
     Groups for
     <strong ng-hide="showGroupSetSelector"> {{selectedGroupSet.name}} </strong>
-    <group-set-selector
+    <!-- <group-set-selector
       ng-show="showGroupSetSelector"
       unit="unit"
       ng-model="selectedGroupSet"
       on-change="selectGroupSet"
+    > -->
+    </group-set-selector>
+    <group-set-selector
+      [hidden]="!showGroupSetSelector"
+      [unit]="unit"
+      [(ngModel)]="selectedGroupSet"
+      (change)="selectGroupSet($event)"
     >
     </group-set-selector>
   </h4>
